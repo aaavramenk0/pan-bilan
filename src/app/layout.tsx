@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { NextUIProvider } from "../lib/next-ui";
 
-const inter = Inter({ subsets: ["latin"] });
 
+const raleway = Raleway({ subsets: ["cyrillic"] });
+
+// TITLE AND OTHER METADATA
 export const metadata: Metadata = {
   title: 'ФГ "Пан Білан"',
   description: 'ФГ "Пан Білан" запрошує школи, дитячі садки і всіх бажаючих на екскурсії до нашого господарства',
+  icons: {
+    icon: '/favicon.ico'
+  }
+  
 };
 
 export default function RootLayout({
@@ -16,7 +26,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ua">
-      <body className={inter.className}>{children}</body>
-    </html>
+        <body className={raleway.className}>
+          <NextUIProvider>
+            <AppRouterCacheProvider>  
+              <header>
+                <Header />
+              </header>
+
+              <main>
+                {children}
+              </main>
+
+              <footer>
+                <Footer />
+              </footer>
+            </AppRouterCacheProvider>
+          </NextUIProvider>
+        </body>    
+      </html>
+    
   );
 }
