@@ -5,6 +5,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { NextUIProvider } from "../lib/next-ui";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 const raleway = Raleway({ subsets: ["cyrillic"] });
@@ -28,7 +30,8 @@ export default function RootLayout({
     <html lang="ua">
         <body className={raleway.className}>
           <NextUIProvider>
-            <AppRouterCacheProvider>  
+          <AppRouterCacheProvider> 
+            
               <header>
                 <Header />
               </header>
@@ -39,7 +42,8 @@ export default function RootLayout({
 
               <footer>
                 <Footer />
-              </footer>
+            </footer>
+            
             </AppRouterCacheProvider>
           </NextUIProvider>
         </body>    

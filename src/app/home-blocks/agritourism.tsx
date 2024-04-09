@@ -15,7 +15,7 @@ const Agrotourism = () => {
                         <Image
                             width={400}
                             alt="NextUI hero Image"
-                            src="https://app.requestly.io/delay/5000/https://images.pexels.com/photos/18581690/pexels-photo-18581690/free-photo-of-cows-on-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1s"
+                            src="https://images.pexels.com/photos/18581690/pexels-photo-18581690/free-photo-of-cows-on-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1s"
                         />
                     </div>
                     
@@ -23,7 +23,7 @@ const Agrotourism = () => {
                         <Image
                             width={400}
                             alt="NextUI hero Image"
-                            src="https://app.requestly.io/delay/5000/https://images.pexels.com/photos/5529604/pexels-photo-5529604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            src="https://images.pexels.com/photos/5529604/pexels-photo-5529604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         />
                     </div>
                     
@@ -31,7 +31,7 @@ const Agrotourism = () => {
                         <Image
                             width={400}
                             alt="NextUI hero Image"
-                            src="https://app.requestly.io/delay/5000/https://images.pexels.com/photos/4207908/pexels-photo-4207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            src="https://images.pexels.com/photos/4207908/pexels-photo-4207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         />
                     </div>
 
