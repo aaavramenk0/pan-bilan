@@ -1,10 +1,11 @@
 import Agrotourism from "./home-blocks/agritourism"
+import FirstStop from "./home-blocks/first-stop";
 
 export default function Page() {
   return (
     <>
       <Agrotourism />
-      <h1 className="p-32">Hello, world!</h1>
+      <FirstStop />
       <h1>Hello, world!</h1>
       <h1>Hello, world!</h1>
     </>
