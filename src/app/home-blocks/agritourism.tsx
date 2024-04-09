@@ -2,7 +2,7 @@ import { Image } from "@nextui-org/react";
 
 const Agrotourism = () => {
     return (
-        <div className="w-full bg-[url('../images/agritourism/bg.jpg')] bg-no-repeat bg-cover bg-center p-10 px-24" id="aboutus">
+        <div className="w-full bg-[url('https://images.pexels.com/photos/175389/pexels-photo-175389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover bg-center p-10 px-24" id="aboutus">
             
             <div className="bg-gray-50 bg-opacity-60 pb-7">
                 <div className="px-16 py-7 pt-4">
@@ -27,7 +27,7 @@ const Agrotourism = () => {
                         />
                     </div>
                     
-                    <div className="row-end-3 row-span-2"> {/* <div className="row-start-1 row-end-4"> */}
+                    <div className="row-end-3 row-span-2">
                         <Image
                             width={400}
                             alt="NextUI hero Image"
