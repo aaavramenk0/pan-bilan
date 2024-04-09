@@ -5,6 +5,9 @@ import { useState } from "react";
 import NextImage from "next/image";
 import logo from "../images/logo.png"
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function Header() {
     const pathname = usePathname();
@@ -23,11 +26,11 @@ export default function Header() {
     };
 
     return (
-        <div className="bg">
-            <h1 className="text-center text-4xl font-bold py-4">Агротуризм на базі Фермерського Господарства “Пан Білан”</h1>
-        
-            <Navbar isBordered position="sticky" onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}>
-                <NavbarContent className="lg:hidden" justify="center">
+        <div>
+            <h1 className="hidden lg:block text-center text-4xl font-bold py-4">Агротуризм на базі Фермерського Господарства “Пан Білан”</h1>    
+            
+            <Navbar position="sticky" isBordered onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}>
+                <NavbarContent className="lg:hidden" justify="start">
                     <NavbarBrand>
                         <Link href="/"><NextImage src={logo} width={48} alt="Pan Bilan logo" /></Link>
                     </NavbarBrand>
@@ -36,13 +39,13 @@ export default function Header() {
                     <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
                 </NavbarContent>
 
-                <NavbarContent className="hidden lg:flex gap-8" justify="end">
+                <NavbarContent className="hidden lg:flex gap-8" justify="start">
                     <NavbarBrand>
                         <Link href="/"><NextImage src={logo} width={48} alt="Pan Bilan logo"/></Link>
                     </NavbarBrand>
                 </NavbarContent>
 
-                <NavbarContent className="hidden lg:flex gap-8" justify="end">
+                <NavbarContent className="hidden lg:flex gap-8" justify="center">
                     {menuItems.map((item, index) => (
                         <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
                             <Link color="foreground" onClick={handleMenuClose} href={item.href} className="text-xl font-semibold">
@@ -61,8 +64,13 @@ export default function Header() {
                         </NavbarMenuItem>
                     ))}
                 </NavbarMenu>
+
+                <NavbarContent className="hidden lg:flex gap-2" justify="end">
+                    <FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff",}} />
+                    <FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B",}} />
+                </NavbarContent>
             </Navbar>
         </div>
-        
+    
     )
 }
