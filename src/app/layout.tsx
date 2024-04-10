@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="ua">
         <body className={raleway.className}>
           <NextUIProvider>
-          <AppRouterCacheProvider> 
+            <AppRouterCacheProvider> 
             
               <header>
                 <Header />
@@ -42,10 +42,12 @@ export default function RootLayout({
 
               <footer>
                 <Footer />
-            </footer>
+              </footer>
             
             </AppRouterCacheProvider>
           </NextUIProvider>
+        
+          <script src="../path/to/flowbite/dist/flowbite.min.js" async />
         </body>    
       </html>
     
