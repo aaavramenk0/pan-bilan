@@ -46,8 +46,6 @@ export default function RootLayout({
             
             </AppRouterCacheProvider>
           </NextUIProvider>
-        
-          <script src="../path/to/flowbite/dist/flowbite.min.js" async />
         </body>    
       </html>
     
