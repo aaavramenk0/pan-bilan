@@ -32,9 +32,7 @@ export default function RootLayout({
           <NextUIProvider>
             <AppRouterCacheProvider> 
               
-              <header>
-                <Header />
-              </header>
+              <Header />  
 
               <main>
                 {children}

@@ -24,10 +24,12 @@ export default function Header() {
     const handleMenuClose = () => {
         setIsMenuOpen(false);
     };
-    return (
-        <div>
-            <h1 className="hidden lg:block text-center text-4xl font-bold py-4">Агротуризм на базі Фермерського Господарства “Пан Білан”</h1>    
+    
             
+    return (
+        <>
+            <h1 className="hidden lg:block text-center text-4xl font-bold py-4">Агротуризм на базі Фермерського Господарства “Пан Білан”</h1>
+    
             <Navbar position="sticky" isBordered onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}>
                 <NavbarContent className="lg:hidden" justify="start">
                     <NavbarBrand>
@@ -69,7 +71,6 @@ export default function Header() {
                     <FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B",}} />
                 </NavbarContent>
             </Navbar>
-        </div>
-    
+        </>
     )
 }

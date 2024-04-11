@@ -10,8 +10,8 @@ const SecondStop = () => {
                 <div className="px-16 py-7 pt-4 text-center">
                     <FontAwesomeIcon size="3x" icon={fa2} className="border-2 border-black rounded-full p-5 px-7" />
                     <h2 className="font-bold text-4xl my-3">Друга зупинка - &quot;Збір врожаю&quot;</h2>
-                    <div className="grid grid-rows-4 text-xl font-medium text-left leading-10">
-                        <div className="grid grid-cols-3 justify-items-center items-center">
+                    <div className="grid grid-rows-4 gap-8 text-xl font-medium text-left leading-10">
+                        <div className="grid grid-cols-3 gap-8 justify-items-center items-center">
                             <p className="col-span-2">Продовжуючи нашу подорож, ми переходимо до одного з найбільш очікуваних моментів у житті ферми — збору врожаю. Ця зупинка відкриває перед вами всю красу та важливість завершальної стадії аграрного циклу, де кожна рослина, кожен плід є результатом кропіткої праці та турботи</p>
                             <Image
                                 alt="Harvesting"
@@ -20,7 +20,7 @@ const SecondStop = () => {
                             />
                         </div>
                         
-                        <div className="grid grid-cols-3 justify-items-center items-center">
+                        <div className="grid grid-cols-3  gap-8  justify-items-center items-center">
                             <Image
                                 alt="Harvest fruits and vegetables"
                                 src="https://images.pexels.com/photos/7728874/pexels-photo-7728874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -29,7 +29,7 @@ const SecondStop = () => {
                             <p className="col-span-2">На цій зупинці ви не просто спостерігачі, а активні учасники. Вам буде запропоновано взяти участь у зборі врожаю разом з нашою командою. Ви відчуєте на собі, як це — збирати яблука у фруктовому саду, знімати помідори та огірки з грядок, або ж збирати соковиті ягоди прямо з кущів. Це унікальна можливість доторкнутися до самої суті фермерства, відчути зв&apos;язок з землею та зрозуміти, скільки зусиль потрібно для того, щоб виростити якісні та екологічно чисті продукти</p>
                         </div>
 
-                        <div className="grid grid-cols-3 justify-items-center items-center">
+                        <div className="grid grid-cols-3 gap-8  justify-items-center items-center">
                             <p className="col-span-2">Під час збору врожаю ви також дізнаєтесь більше про різні сорти рослин, методи їх вирощування, а також про техніки зберігання та переробки продукції. Ми розкажемо вам, як правильно визначати стиглість плодів, щоб збір врожаю був максимально ефективним та безвідходним</p>
                             <Image
                                 alt="Harvesting"
@@ -38,7 +38,7 @@ const SecondStop = () => {
                             />
                         </div>
 
-                        <div className="grid grid-cols-3 justify-items-center items-center">
+                        <div className="grid grid-cols-3 gap-8  justify-items-center items-center">
                             <Image
                                 alt="Harvesting"
                                 src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
