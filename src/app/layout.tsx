@@ -31,7 +31,7 @@ export default function RootLayout({
         <body className={raleway.className}>
           <NextUIProvider>
             <AppRouterCacheProvider> 
-            
+              
               <header>
                 <Header />
               </header>

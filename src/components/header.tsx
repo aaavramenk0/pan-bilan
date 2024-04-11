@@ -15,16 +15,15 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
-        { label: "Про нас", href: "#aboutus" },
-        { label: "Партнери", href: "#partners" },
-        { label: "Галерея", href: "#gallery" },
-        { label: "Контакти", href: "#contacts" },
+        { label: "Про нас", href: "/#aboutus" },
+        { label: "Партнери", href: "/#partners" },
+        { label: "Галерея", href: "/gallery" },
+        { label: "Контакти", href: "/#contacts" },
     ]
     
     const handleMenuClose = () => {
         setIsMenuOpen(false);
     };
-
     return (
         <div>
             <h1 className="hidden lg:block text-center text-4xl font-bold py-4">Агротуризм на базі Фермерського Господарства “Пан Білан”</h1>    
@@ -32,7 +31,7 @@ export default function Header() {
             <Navbar position="sticky" isBordered onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen}>
                 <NavbarContent className="lg:hidden" justify="start">
                     <NavbarBrand>
-                        <Link href="/"><NextImage src={logo} width={48} alt="Pan Bilan logo" /></Link>
+                        <Link href="/"><NextImage src={logo} width={100} alt="Pan Bilan logo" /></Link>
                     </NavbarBrand>
                 </NavbarContent>
                 <NavbarContent className="lg:hidden" justify="end">
@@ -41,7 +40,7 @@ export default function Header() {
 
                 <NavbarContent className="hidden lg:flex gap-8" justify="start">
                     <NavbarBrand>
-                        <Link href="/"><NextImage src={logo} width={48} alt="Pan Bilan logo"/></Link>
+                        <Link href="/"><NextImage src={logo} width={100} alt="Pan Bilan logo"/></Link>
                     </NavbarBrand>
                 </NavbarContent>
 

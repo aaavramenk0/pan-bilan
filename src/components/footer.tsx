@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <div className="px-24 py-5 grid grid-cols-3 ">
             <div>
-                <Image src={logo} alt="Pan Bilan logo" /> 
+                <Image src={logo} alt="Pan Bilan logo" height={146}/> 
                 <p className="my-3 text-2xl">
                     Україна, Одеська область, <br />
                     28-29км автодороги «Одеса - Рені»
