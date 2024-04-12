@@ -67,8 +67,8 @@ export default function Header() {
                 </NavbarMenu>
 
                 <NavbarContent className="hidden lg:flex gap-2" justify="end">
-                    <FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff",}} />
-                    <FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B",}} />
+                    <a href="https://www.facebook.com/farm.pan.bilan" ><FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff",}} /></a>
+                    <a href="https://www.instagram.com/pan.bilan/"><FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B",}} /></a>
                 </NavbarContent>
             </Navbar>
         </>
