@@ -4,6 +4,7 @@
 
 * {
     scroll-behavior: smooth;
+    scroll-padding-top: 75px;
 }
 a {
     text-decoration: none;

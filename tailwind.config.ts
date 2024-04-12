@@ -10,7 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-
+      screens: {
+        'lg': '1250px',
+      }
     },
   },
   plugins: [
