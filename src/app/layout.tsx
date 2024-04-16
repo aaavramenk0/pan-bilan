@@ -7,6 +7,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { NextUIProvider } from "../lib/next-ui";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Link from "next/link";
 
 
 const raleway = Raleway({ subsets: ["cyrillic"] });
@@ -32,7 +33,7 @@ export default function RootLayout({
           <NextUIProvider>
             <AppRouterCacheProvider> 
               
-              <Header />  
+              <Header /> 
 
               <main>
                 {children}

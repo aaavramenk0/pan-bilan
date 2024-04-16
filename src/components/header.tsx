@@ -3,6 +3,7 @@
 import { Link, menu, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { useState } from "react";
 import NextImage from "next/image";
+import NextLink from "next/link";
 import logo from "../images/logo.png"
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -46,29 +47,32 @@ export default function Header() {
                     </NavbarBrand>
                 </NavbarContent>
 
+                {/* Desktop Menu */}
                 <NavbarContent className="hidden lg:flex gap-8" justify="center">
                     {menuItems.map((item, index) => (
                         <NavbarItem isActive={pathname == `${item.href}` ? true : false} key={index}>
-                            <Link color="foreground" onClick={handleMenuClose} href={item.href} className="text-xl font-semibold">
+                            <NextLink color="foreground" onClick={handleMenuClose} href={item.href} className="text-xl font-semibold">
                                 {item.label}
-                            </Link>
+                            </NextLink>
                         </NavbarItem>
                     ))}
                 </NavbarContent>
 
+                {/* Mobile menu */}
                 <NavbarMenu> 
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={index}>
-                            <Link className="w-full" onClick={handleMenuClose} color="foreground" href="item.href" size="lg">
+                            <NextLink className="w-full text-xl font-semibold" onClick={handleMenuClose} color="foreground" href={item.href}>
                                 {item.label}
-                            </Link>
+                            </NextLink>
                         </NavbarMenuItem>
                     ))}
                 </NavbarMenu>
 
+                {/* Desktop social media icons */}
                 <NavbarContent className="hidden lg:flex gap-2" justify="end">
-                    <a href="https://www.facebook.com/farm.pan.bilan" ><FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff",}} /></a>
-                    <a href="https://www.instagram.com/pan.bilan/"><FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B",}} /></a>
+                    <a href="https://www.facebook.com/farm.pan.bilan" ><FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff"}} /></a>
+                    <a href="https://www.instagram.com/pan.bilan/"><FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B"}} /></a>
                 </NavbarContent>
             </Navbar>
         </>
