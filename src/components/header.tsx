@@ -16,7 +16,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
-        { label: "Про нас", href: "/#aboutus" },
+        { label: "Про нас", href: "/" },
         { label: "Партнери", href: "/#partners" },
         { label: "Галерея", href: "/gallery" },
         { label: "Контакти", href: "/#contacts" },
@@ -71,8 +71,8 @@ export default function Header() {
 
                 {/* Desktop social media icons */}
                 <NavbarContent className="hidden lg:flex gap-2" justify="end">
-                    <a href="https://www.facebook.com/farm.pan.bilan" ><FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff"}} /></a>
-                    <a href="https://www.instagram.com/pan.bilan/"><FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B"}} /></a>
+                    <a href="https://www.facebook.com/farm.pan.bilan" target="_blank"><FontAwesomeIcon size="3x" icon={faFacebook} style={{color: "#0091ff"}} /></a>
+                    <a href="https://www.instagram.com/pan.bilan/" target="_blank"><FontAwesomeIcon size="3x" icon={faInstagram} style={{color: "#C1558B"}} /></a>
                 </NavbarContent>
             </Navbar>
         </>
