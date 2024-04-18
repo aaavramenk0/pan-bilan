@@ -19,7 +19,7 @@ export default function Header() {
         { label: "Про нас", href: "/" },
         { label: "Партнери", href: "/#partners" },
         { label: "Галерея", href: "/gallery" },
-        { label: "Контакти", href: "/#contacts" },
+        { label: "Контакти", href: "#contacts" },
     ]
     
     const handleMenuClose = () => {
