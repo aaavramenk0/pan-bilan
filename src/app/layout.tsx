@@ -14,7 +14,7 @@ const raleway = Raleway({ subsets: ["cyrillic"] });
 
 // TITLE AND OTHER METADATA
 export const metadata: Metadata = {
-  title: 'ФГ "Пан Білан"',
+  title: '"Пан Білан" | Головна',
   description: 'ФГ "Пан Білан" запрошує школи, дитячі садки і всіх бажаючих на екскурсії до нашого господарства',
   icons: {
     icon: '/favicon.ico'
