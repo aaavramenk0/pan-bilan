@@ -6,7 +6,7 @@ export default async function Admin() {
     
     return (
         <>
-            {/* <div className="max-w-[1200px] m-auto">
+            <div className="max-w-[1200px] m-auto">
                 <h2 className="text-center font-bold text-3xl mt-5">Адміністративна панель управління</h2>
 
                 <h3 className="pl-6 text-xl font-semibold mb-2">Додати фотографії до галереї</h3>
@@ -17,9 +17,7 @@ export default async function Admin() {
 
                 <h3>Фотографії на сайті: </h3>
                 <Gallery />
-            </div> */}
-            
-            Hello, world!
+            </div>
         
         </>
     )
