@@ -1,38 +1,15 @@
-const api_key = process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY
-const api_secret = process.env.CLOUDINARY_API_SECRET
-const cloud_name = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+import { v2 as cloudinary } from 'cloudinary';
+import { revalidatePath } from 'next/cache';
+
+cloudinary.config({
+    cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+})
 
 // Get ALL Images From Cloudinary Media Library
 export async function getAllImages() {
-    const results = await fetch(`https://api.cloudinary.com/v1_1/${cloud_name}/resources/image`, {
-      headers: {
-        Authorization: `Basic ${Buffer.from(api_key + ':' + api_secret).toString('base64')}`
-      }
-    }).then(res => res.json());
-  
-    const { resources } = results;
-  
-    const images = resources.map((resource : any) => {
-      return {
-        asset_id: resource.asset_id,
-        public_id: resource.public_id,
-        secure_url: resource.secure_url,
-        width: resource.width,
-        height: resource.height
-      }
-    })
-  
-    return { images };
-}
-
-// Get Images From Cloudinary Media Library From GALLERY Folder
-export async function getGalleryImages() {
-  const results = await fetch(`https://api.cloudinary.com/v1_1/${cloud_name}/resources/by_asset_folder?asset_folder=gallery`, {
-      headers: {
-        Authorization: `Basic ${Buffer.from(api_key + ':' + api_secret).toString('base64')}`
-      }
-    }).then(res => res.json());
-
+  const results = await cloudinary.api.resources();
   const { resources } = results;
 
   const images = resources.map((resource : any) => {
@@ -44,6 +21,48 @@ export async function getGalleryImages() {
       height: resource.height
     }
   })
+  revalidatePath('/')
+  return { images } 
+}
 
-  return { images };
+// Get Images From Cloudinary Media Library From GALLERY Folder
+export async function getGalleryImages() {
+  const results = await cloudinary.search.expression("asset_folder=gallery").execute();
+  const { resources } = results;
+
+  const images = resources.map((resource : any) => {
+    return {
+      asset_id: resource.asset_id,
+      public_id: resource.public_id,
+      secure_url: resource.secure_url,
+      width: resource.width,
+      height: resource.height
+    }
+  })
+  revalidatePath('/gallery')
+  return { images }
+
+}
+
+// Upload image to the Media Library
+export async function uploadImage(formData: FormData) {
+  'use server';
+  const file = formData.get('image') as File;
+  const arrayBuffer = await file.arrayBuffer()
+  const buffer = new Uint8Array(arrayBuffer)
+  await new Promise((resolve, reject) => {
+    cloudinary.uploader.upload_stream({
+      folder: "gallery"
+    }, function (error, result) {
+      if (error) {
+        reject(error);
+        return
+      } else {
+        resolve(result)
+        formData.delete('image')
+      }
+      
+    }).end(buffer)
+  })
+  revalidatePath('/admin')
 }

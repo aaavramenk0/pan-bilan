@@ -3,8 +3,8 @@ import { ImageList, ImageListItem } from "@mui/material";
 import { Image } from "@nextui-org/react";
 
 export default async function Gallery() {
-  const { images } = await getAllImages();
-  console.log(images);
+  const { images } = await getGalleryImages();
+  // console.log(images);
 
   const ImagesGrid = () => {
     return (
