@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { NextUIProvider } from "../lib/next-ui";
-import { Suspense } from "react";
-import Loading from "./loading";
-import Link from "next/link";
-
 
 const raleway = Raleway({ subsets: ["cyrillic"] });
 
@@ -32,17 +26,9 @@ export default function RootLayout({
         <body className={raleway.className}>
           <NextUIProvider>
             <AppRouterCacheProvider> 
-              
-              <Header /> 
-
               <main>
                 {children}
               </main>
-
-              <footer>
-                <Footer />
-              </footer>
-            
             </AppRouterCacheProvider>
           </NextUIProvider>
         </body>    

@@ -6,7 +6,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
 
 export default function Footer() {
     return (
-        <div className="px-5 py-3 lg:px-10 lg:py-5 lg:grid lg:grid-cols-3 lg:gap-10">
+        <footer className="px-5 py-3 lg:px-10 lg:py-5 lg:grid lg:grid-cols-3 lg:gap-10">
             <div className="lg:m-0" id="contacts">
                 <Image src={logo} alt="Pan Bilan logo" height={146} className="m-auto lg:m-0"/> 
                 <p className="my-3 text-2xl">
@@ -44,6 +44,6 @@ export default function Footer() {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43963.29451677569!2d30.404347999999995!3d46.474333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c7d5526e96afb3%3A0x25d7fa90a741840e!2z0KTQpSAi0J_QsNC9INCR0LjQu9Cw0L0i!5e0!3m2!1sen!2sus!4v1712750068819!5m2!1sen!2sus" className="border-0 w-full h-[350px] " loading="lazy" ></iframe>
             </div>
             
-        </div>
+        </footer>
     )
 }

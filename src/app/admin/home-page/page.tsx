@@ -1,9 +1,9 @@
-import Agrotourism from "@/app/home-blocks/agritourism";
+import Agritourism from "@/app/home-blocks/agritourism";
 
-export default function HomePage() {
+export default function AdminHomePage() {
   return (
     <div>
-      <Agrotourism /> 
+      <Agritourism /> 
     </div>
   );
 }

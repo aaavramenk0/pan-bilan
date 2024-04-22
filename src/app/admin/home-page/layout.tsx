@@ -20,7 +20,7 @@ export default function AdminHomePageLayout({ children }: Readonly<{ children: R
     return (
         <div> 
             
-            <ul className="grid grid-rows-1 grid-cols-5 justify-center text-center align-middle text-xl py-4">
+            <ul className="max-w-3xl m-auto grid grid-rows-1 grid-cols-5 justify-center text-center align-middle text-xl py-4">
                 {listItems.map((item, index) => (
                     <li key={index}>
                         <a href={item.href}>{item.label}</a>

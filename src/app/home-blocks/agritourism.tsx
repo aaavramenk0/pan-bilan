@@ -1,6 +1,6 @@
 import { Image } from "@nextui-org/react";
 
-const Agrotourism = () => {
+const Agritourism = () => {
     return (
         <div className="w-full bg-[url('https://images.pexels.com/photos/175389/pexels-photo-175389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat bg-cover bg-center p-5 px-3 lg:p-10 lg:px-24" id="aboutus">
             
@@ -43,4 +43,4 @@ const Agrotourism = () => {
     )
 }
 
-export default Agrotourism;
+export default Agritourism;
