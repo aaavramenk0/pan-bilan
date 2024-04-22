@@ -4,10 +4,16 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import axios from "axios"
 import { Button, Link, Input } from "@nextui-org/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
 
 export default function SignupPage() {
     const router = useRouter()
     const [loading, setLoading] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => setIsVisible(!isVisible);
+
     const [user, setUser] = useState({
         email: "",
         password: ""
@@ -41,12 +47,20 @@ export default function SignupPage() {
             <Input
                 value={user.password}
                 onChange={(e) => setUser({...user, password: e.target.value})}
-                type="text"
+                endContent={
+                    <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
+                      {isVisible ? (
+                        <FontAwesomeIcon icon={faEye} />
+                      ) : (
+                        <FontAwesomeIcon icon={faEyeSlash} />
+                      )}
+                    </button>
+                  }
+                  type={isVisible ? "text" : "password"}
                 placeholder="Введіть пароль"
                 variant="bordered"
                 size="lg"
                 className="my-5"
-            
             />
             <Button
                 onClick={onSignup}
