@@ -17,7 +17,7 @@ export default function Header() {
 
     const menuItems = [
         { label: "Про нас", href: "/" },
-        { label: "Партнери", href: "/#partners" },
+        { label: "Партнери", href: "/partners" },
         { label: "Галерея", href: "/gallery" },
         { label: "Контакти", href: "#contacts" },
     ]
