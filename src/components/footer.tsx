@@ -35,7 +35,7 @@ export default function Footer() {
                 </p>
                 <p>
                     З найкращими побажаннями здоров&apos;я та благополуччя, <br />
-                    <span className="font-semibold text-xl">Виталій Білан</span>
+                    <span className="font-semibold text-xl">Віталій Білан</span>
                 </p>
                 <Divider className="lg:hidden my-10 h-[2px]" />
             </div>

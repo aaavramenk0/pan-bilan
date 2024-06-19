@@ -26,8 +26,7 @@ export default function LoginPage() {
             router.push("/admin");
             
         } catch (error:any) {
-            console.log("Login failed", error.message);
-            
+            alert("E-mail або пароль невірні. Будь ласка спробуйте ще раз з правильною інформацією!");
         } finally {
             setLoading(false);
         }

@@ -1,6 +1,8 @@
-import { Card, Image } from "@nextui-org/react";
+import { Card, Image, Input, Textarea, Button, Link } from "../../lib/next-ui";
 
 export default function Partners() {
+
+
   return (
     <div className="px-3 lg:px-24">
       <h1 className="text-center mt-2 font-bold text-3xl lg:text-4xl">Співпраця з нами - це вигідно!</h1>
@@ -38,8 +40,21 @@ export default function Partners() {
             <Image alt="Prestige Fruit" height={300} width={300} className="object-cover" src="https://prestigefruit.com/app/themes/lyfter-child/img/base/brand-logo.png"/>
           </div>
         </Card>
-        
       </div>
+
+      <h2 className="text-center my-4 font-bold text-3xl lg:text-4xl">Стати нашим партнером</h2>
+      <form className="max-w-[1200px] m-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-5">
+          <Input type="text" label="Ім'я та прізвище" placeholder="Василь Петренко" size="lg" variant="bordered" radius="md" labelPlacement="outside" required/>
+          <Input type="text" label="E-mail" placeholder="vasylpetrenko@example.com" size="lg" variant="bordered" radius="md" labelPlacement="outside" required/>
+          <Input type="text" label="Номер телефону" placeholder="+38 099 999 9999" size="lg" variant="bordered" radius="md" labelPlacement="outside" required/>
+          <Input type="text" label="Назва бізнесу" placeholder="Ресторан: &quot;В гостях у Петренка&quot;" size="lg" variant="bordered" radius="md" labelPlacement="outside" required/>
+        </div>
+        <Textarea className="mt-5" label="Повідомлення" placeholder="Розкажіть як ви бачите партнерство вашого бізнесу із ФГ &quot;Пан Білан&quot;..." size="lg" variant="bordered" radius="md" labelPlacement="outside" />
+        <div className="w-full text-center">
+          <Button color="success" size="lg" variant="solid" className="m-auto mt-5">Відправити заявку</Button>
+        </div>
+      </form>
     </div>
   )
 }

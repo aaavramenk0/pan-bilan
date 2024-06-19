@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
         //check if password is correct
         const validPassword = await bcryptjs.compare(password, user.password)
         if (!validPassword) {
-            return NextResponse.json({ error: "Invlid password" }, { status: 400 })
+            return NextResponse.json({ error: "Invalid password" }, { status: 400 })
         }
 
         // create token data
@@ -49,7 +49,8 @@ export async function POST(request: NextRequest) {
 
         return response;
     } catch (error: any) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        alert("Wrong username or password!")
+        // return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
 

@@ -56,10 +56,10 @@ export async function uploadImage(formData: FormData) {
     }, function (error, result) {
       if (error) {
         reject(error);
-        return
       } else {
         resolve(result)
         formData.delete('image')
+        revalidatePath('/admin/gallery')
       }
       
     }).end(buffer)
